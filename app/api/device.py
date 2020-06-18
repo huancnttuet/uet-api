@@ -21,7 +21,7 @@ class Kiki(Resource):
         args = parser.parse_args()
         d_name = args['device_name']
         d_id = args['device_id']
-        service.add_device(d_name, d_id)
+        service.add_device(d_id, d_name)
         return "ok"
 
 
