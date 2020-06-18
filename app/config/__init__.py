@@ -8,6 +8,6 @@ MYSQL_DBNAME = os.getenv('MYSQL_DBNAME')
 
 def init_app(app):
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://{}:{}@{}/{}'.format(
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{}:{}@{}/{}'.format(
         MYSQL_USERNAME, MYSQL_PWD, MYSQL_HOST, MYSQL_DBNAME)
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
