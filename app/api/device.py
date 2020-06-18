@@ -11,12 +11,9 @@ parser.add_argument('device_id')
 
 @api.route('/')
 class Kiki(Resource):
-    def get(self):
-
-        return 'kiki'
 
     @api.expect(parser)
-    def post(seft):
+    def get(seft):
 
         args = parser.parse_args()
         d_name = args['device_name']
