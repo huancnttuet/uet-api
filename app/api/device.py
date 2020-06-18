@@ -12,12 +12,11 @@ parser.add_argument('device_id')
 @api.route('')
 class Kiki(Resource):
 
-    @api.expect(parser)
-    def get(seft):
-
-        args = parser.parse_args()
-        d_name = args['device_name']
-        d_id = args['device_id']
+    def post(seft):
+        print(request.get_json())
+        req = request.get_json()
+        d_id = req.device_id
+        d_name = req.device_name
         service.add_device(d_id, d_name)
         return "ok"
 
