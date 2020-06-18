@@ -20,6 +20,7 @@ MarkupSafe==1.1.1
 mccabe==0.6.1
 mysqlclient==1.4.6
 pylint==2.5.3
+PyMySQL==0.9.3
 pyrsistent==0.16.0
 python-dateutil==2.8.1
 python-dotenv==0.13.0
