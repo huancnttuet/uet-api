@@ -15,8 +15,8 @@ class Kiki(Resource):
     def post(seft):
         print(request.get_json())
         req = request.get_json()
-        d_id = req.device_id
-        d_name = req.device_name
+        d_id = req['device_id']
+        d_name = req['device_name']
         service.add_device(d_id, d_name)
         return "ok"
 
