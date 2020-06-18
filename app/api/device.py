@@ -9,7 +9,7 @@ parser.add_argument('device_name')
 parser.add_argument('device_id')
 
 
-@api.route('/')
+@api.route('')
 class Kiki(Resource):
 
     @api.expect(parser)
