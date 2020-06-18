@@ -1,5 +1,5 @@
 from flask_restplus import Api
-from .test import api as kiki_ns
+from .device import api as kiki_ns
 
 
 def init_app(app):
