@@ -1,6 +1,8 @@
 from flask_restplus import Api
 from .device import api as kiki_ns
 from .notify import api as notify_ns
+from .cron_job import api as cron_ns
+
 
 def init_app(app):
     api = Api(app,
@@ -10,4 +12,5 @@ def init_app(app):
 
     api.add_namespace(kiki_ns)
     api.add_namespace(notify_ns)
+    api.add_namespace(cron_ns)
     return app
