@@ -29,9 +29,9 @@ def send_notify(title, message):
 
     # Sending a notification with data message payload
     data_message = {
-        "Nick": "Mario",
-        "body": "great match!",
-        "Room": "PortugalVSDenmark"
+        "title": title,
+        "message": message,
+
     }
     # To multiple devices
     result = push_service.multiple_devices_data_message(
