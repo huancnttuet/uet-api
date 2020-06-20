@@ -38,3 +38,19 @@ def send_notify(title, message):
         registration_ids=registration_ids, data_message=data_message)
 
     print(result)
+    return result
+
+
+def send_notify_single(device_id, title, message):
+    push_service = FCMNotification(api_key=API_KEY)
+    registration_id = device_id
+    data_message = {
+        "title": title,
+        "message": message,
+    }
+    # To a single device
+    result = push_service.single_device_data_message(
+        registration_id=registration_id, data_message=data_message)
+
+    print(result)
+    return result
