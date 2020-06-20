@@ -18,7 +18,7 @@ class Kiki(Resource):
         d_id = req['device_id']
         d_name = req['device_name']
         service.add_device(d_id, d_name)
-        return 200
+        return {'status': 200}
 
 
 @api.route('/get-add-device-id')
