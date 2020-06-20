@@ -29,12 +29,12 @@ def send_notify(title, message):
 
     # Sending a notification with data message payload
     data_message = {
-        "Nick" : "Mario",
-        "body" : "great match!",
-        "Room" : "PortugalVSDenmark"
+        "Nick": "Mario",
+        "body": "great match!",
+        "Room": "PortugalVSDenmark"
     }
     # To multiple devices
-    result = push_service.notify_multiple_devices(registration_ids=registration_ids, message_body=message, data_message=data_message)
+    result = push_service.multiple_devices_data_message(
+        registration_ids=registration_ids, data_message=data_message)
 
     print(result)
-   
