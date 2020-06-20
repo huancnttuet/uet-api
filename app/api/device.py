@@ -21,6 +21,15 @@ class Kiki(Resource):
         return {'status': 200}
 
 
+@api.route('/delete')
+class Haha(Resource):
+
+    def post(seft):
+        req = request.get_json()
+        d_id = req['device_id']  
+        service.delete_device(d_id)
+        return {'status': 200}
+
 @api.route('/get-add-device-id')
 class Hihi(Resource):
     def get(self):

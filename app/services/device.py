@@ -6,6 +6,9 @@ def add_device(device_id, device_name):
     db.session.add(newDevice)
     db.session.commit()
 
+def delete_device(device_id):
+    DeviceModel.query.filter(DeviceModel.code == device_id).delete()
+    db.session.commit()
 
 def get_all_device_id():
     divices = DeviceModel.query.all()
