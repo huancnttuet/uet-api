@@ -1,7 +1,7 @@
 # Send to single device.
 from pyfcm import FCMNotification
 from . import device
-API_KEY = "AAAASbdcJv8:APA91bE0f5EwEPgQZe043rWL1YGLXo5gpahBvDx_UXmyZ3AC_e0qnF5djzoGrXhClsVJcHjyNX_99WyAj2i_T3n1J_7Xn8x8zk8LCoyOaj5Wis1fHNemNkaJIx9NCMY4hQT-uP7uwlAE"
+API_KEY = "AAAAXsPpUNE:APA91bGeXH6azmaVcJuOAgoz4c5BMJV6vk3mx0ZAgrEEcM71-KG7T996vOhJKDLIwrdxIEbvFSRqMLJ0HXQM8aCA03HghraviJrkTbb4Kr1R7CK8ODvc-l8N2va7IqLIieD2FX62YjQU"
 
 
 def send_notify(title, message):
