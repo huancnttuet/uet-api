@@ -18,7 +18,7 @@ def job_function():
     k = 0
     for t, n in zip(temp, news):
         if t != n:
-            fcm_notify.send_notify("Tin tức sinh viên", t[0])
+            fcm_notify.send_notify("Tin tức sinh viên", t[0], "webview", t[2])
             k = 1
     if k == 1:
         news = temp
