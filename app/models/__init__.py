@@ -11,3 +11,4 @@ def init_app(app):
 
 
 from .device import DeviceModel
+from .examtime import ExamtimeModel

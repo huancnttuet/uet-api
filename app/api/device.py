@@ -20,7 +20,7 @@ class Kiki(Resource):
         d_name = req['device_name']
         service.add_device(d_id, d_name)
         service2.send_notify_single(
-            d_id, "Nhận thông báo", "Bạn vừa đăng ký nhận thông báo thành công")
+            d_id, "Nhận thông báo", "Bạn vừa đăng ký nhận thông báo thành công", "", "")
         return {'status': 200}
 
 
@@ -30,6 +30,8 @@ class Haha(Resource):
     def post(seft):
         req = request.get_json()
         d_id = req['device_id']
+        service2.send_notify_single(
+            d_id, "Nhận thông báo", "Bạn vừa hủy nhận thông báo thành công", "", "")
         service.delete_device(d_id)
         return {'status': 200}
 

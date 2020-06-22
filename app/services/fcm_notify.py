@@ -4,7 +4,7 @@ from . import device
 API_KEY = "AAAAXsPpUNE:APA91bGeXH6azmaVcJuOAgoz4c5BMJV6vk3mx0ZAgrEEcM71-KG7T996vOhJKDLIwrdxIEbvFSRqMLJ0HXQM8aCA03HghraviJrkTbb4Kr1R7CK8ODvc-l8N2va7IqLIieD2FX62YjQU"
 
 
-def send_notify(title, message):
+def send_notify(title, message, action, payload):
     push_service = FCMNotification(api_key=API_KEY)
 
     # OR initialize with proxies
@@ -31,7 +31,8 @@ def send_notify(title, message):
     data_message = {
         "title": title,
         "message": message,
-
+        "action": action,
+        "payload": payload
     }
     # To multiple devices
     result = push_service.multiple_devices_data_message(
@@ -41,12 +42,14 @@ def send_notify(title, message):
     return result
 
 
-def send_notify_single(device_id, title, message):
+def send_notify_single(device_id, title, message, action, payload):
     push_service = FCMNotification(api_key=API_KEY)
     registration_id = device_id
     data_message = {
         "title": title,
         "message": message,
+        "action": action,
+        "payload": payload
     }
     # To a single device
     result = push_service.single_device_data_message(
